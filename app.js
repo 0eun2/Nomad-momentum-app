@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-const title = document.getElementById("title");
-
-title.innerText = "Got you!";
-=======
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
 
-function onLoginBtnClick(){
-    console.log(username);
+const link = document.querySelector("a");
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    console.log(loginInput.value);
 }
 
-loginButton.addEventListener("click", onLoginBtnClick);
->>>>>>> 366dcfb09244f51c789de96fa746f011366a88fe
+loginForm.addEventListener("submit", onLoginSubmit);
